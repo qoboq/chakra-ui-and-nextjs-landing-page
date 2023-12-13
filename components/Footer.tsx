@@ -7,7 +7,8 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { ReactNode } from "react"
 
 const SocialButton = ({
@@ -57,16 +58,13 @@ export default function SmallWithSocial() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        <Text>© 2023 Statybos samata. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter />
+          <SocialButton label={"Phone"} href={"#"}>
+            <FaPhone />
           </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
-            <FaInstagram />
+          <SocialButton label={"Email"} href={"#"}>
+            <MdEmail />
           </SocialButton>
         </Stack>
       </Container>

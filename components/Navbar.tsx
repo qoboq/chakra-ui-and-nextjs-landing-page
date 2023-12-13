@@ -59,7 +59,7 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
           >
             <Button as="a" href="/" variant={"link"}>
-              Logo
+             Statybos samatos
             </Button>
           </Text>
 
@@ -74,29 +74,7 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href="/signin"
-          >
-            Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            href="/signup"
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Sign Up
-          </Button>
+
         </Stack>
       </Flex>
 
@@ -269,41 +247,28 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Apie mus",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
+        label: "Veikla",
+        subLabel: "kazkas kazkas kazkas",
         href: "#",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
+        label: "Kontakai",
+        subLabel: "kazkas kazkas kazkas",
         href: "#",
       },
     ],
   },
   {
-    label: "Find Work",
+    label: "Kainos",
     children: [
       {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
+        label: "Kainorastis",
+        subLabel: "kazkas kazkas ",
         href: "#",
       },
     ],
-  },
-  {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
   },
 ]

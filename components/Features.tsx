@@ -10,7 +10,10 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from "react-icons/io5"
+import { IoLogoEuro } from "react-icons/io";
+import { FaHouseChimney } from "react-icons/fa6";
+import { FaCalculator } from "react-icons/fa6";
+
 import { ReactElement } from "react"
 
 interface FeatureProps {
@@ -52,9 +55,9 @@ export default function SplitWithImage() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            Our Story
+            Musu paslaugos
           </Text>
-          <Heading>A digital Product design agency</Heading>
+          <Heading>Statybos samatu skaiciavimas</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore
@@ -69,22 +72,22 @@ export default function SplitWithImage() {
           >
             <Feature
               icon={
-                <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
+                <Icon as={FaHouseChimney} color={"yellow.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"Business Planning"}
+              text={"Projektas"}
             />
             <Feature
-              icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
+              icon={<Icon as={FaCalculator} color={"green.500"} w={5} h={5} />}
               iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Financial Planning"}
+              text={"Samata"}
             />
             <Feature
               icon={
-                <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
+                <Icon as={IoLogoEuro} color={"purple.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Market Analysis"}
+              text={"kazkas"}
             />
           </Stack>
         </Stack>
