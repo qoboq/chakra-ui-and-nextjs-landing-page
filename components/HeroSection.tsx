@@ -21,23 +21,29 @@ export default function CallToActionWithAnnotation() {
         />
       </Head>
 
-      <Container maxW={"3xl"}>
-        <Stack
-          as={Box}
-          textAlign={"center"}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
-        >
+      <Box
+        width="100%"
+        maxWidth="100vw"
+        height="100vh"
+        overflowX="hidden"
+        bgImage="url('/bg.jpg')" // Replace with your image path
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+      >
+        <Box maxW={"3xl"} mx="auto" textAlign={"center"} pt="20vh">
           <Heading
             fontWeight={600}
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
+            color={"white"} // Adjust color for visibility against background
           >
             Statybos <br />
             <Text as={"span"} color={"blue.400"}>
               samatu skaiciavimas
             </Text>
           </Heading>
+
           <Text color={"gray.500"}>
             Kazkoks tekstas
           </Text>
@@ -63,8 +69,8 @@ export default function CallToActionWithAnnotation() {
               Daugiau
             </Button>
           </Stack>
-        </Stack>
-      </Container>
+        </Box>
+      </Box>
     </>
   )
 }
