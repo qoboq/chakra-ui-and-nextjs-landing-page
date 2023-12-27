@@ -59,7 +59,7 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
           >
             <Button as="a" href="/" variant={"link"}>
-             Statybos samatos
+            Statybos sąmatų skaičiavimai
             </Button>
           </Text>
 
@@ -246,29 +246,5 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Apie mus",
-    children: [
-      {
-        label: "Veikla",
-        subLabel: "kazkas kazkas kazkas",
-        href: "#",
-      },
-      {
-        label: "Kontakai",
-        subLabel: "kazkas kazkas kazkas",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Kainos",
-    children: [
-      {
-        label: "Kainorastis",
-        subLabel: "kazkas kazkas ",
-        href: "#",
-      },
-    ],
-  },
+
 ]

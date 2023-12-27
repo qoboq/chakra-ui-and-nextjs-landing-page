@@ -3,6 +3,7 @@ import {
   SimpleGrid,
   Image,
   Flex,
+  Box,
   Heading,
   Text,
   Stack,
@@ -10,7 +11,7 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { IoLogoEuro } from "react-icons/io";
+import { MdOutlineArchitecture } from "react-icons/md";
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaCalculator } from "react-icons/fa6";
 
@@ -55,12 +56,11 @@ export default function SplitWithImage() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            Musu paslaugos
+            Mūsų paslaugos
           </Text>
-          <Heading>Statybos samatu skaiciavimas</Heading>
+          <Heading>Reikalinga sąmata už priimtina kaina ir greitai?</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+           Jeigu taip, siūlome sąmatas tiek verslui tiek privačiam klientui. Sąmatos banko paskolai gauti, draudimui, sąmatos statybos kainai įvertinti ir kita.
           </Text>
           <Stack
             spacing={4}
@@ -71,36 +71,66 @@ export default function SplitWithImage() {
             }
           >
             <Feature
-              icon={
-                <Icon as={FaHouseChimney} color={"yellow.500"} w={5} h={5} />
+
+  text={
+    <div style={{ display: "flex", flexDirection: "column" }}>
+
+      <Text color={"gray.800"}>
+        <p>Privatiems asmenims:</p>
+        <ul>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų skaičiavimas banko paskolai gauti.</li>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatos skaičiavimas nutikus draudiminiam įvykiui.</li>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Siūlomų darbų sąmatų kainų patikrinimas</li>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Konsultavimas statybos kainos klausimais</li>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Kainų užklausos medžiagų tiekėjams.</li>
+        </ul>
+      </Text>
+    </div>
+  }
+/>
+
+
+            <Feature
+
+              text={
+                <div style={{ display: "flex", flexDirection: "column" }}>
+            
+                  <Text color={"gray.800"}>
+                    <p>Statybų įmonėms :</p>
+                    <ul>
+                      <li style={{ color: "gray.800", fontWeight: "500" }}>Visų statybos darbų Sąmatų skaičiavimas.</li>
+                      <li style={{ color: "gray.800", fontWeight: "500" }}>Visa pagalba dalyvaujant Viešuosiuose pirkimuose nuo starto iki pateikimo.</li>
+                      <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų analizė, klaidų paieškos.</li>
+                      <li style={{ color: "gray.800", fontWeight: "500" }}>Objektų aktavimas.</li>
+                    </ul>
+                  </Text>
+                </div>
               }
-              iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"Projektas"}
             />
             <Feature
-              icon={<Icon as={FaCalculator} color={"green.500"} w={5} h={5} />}
-              iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Samata"}
-            />
-            <Feature
-              icon={
-                <Icon as={IoLogoEuro} color={"purple.500"} w={5} h={5} />
+              text={
+                <div style={{ display: "flex", flexDirection: "column" }}>
+            
+                  <Text color={"gray.800"}>
+                    <p>Architektams projektuotojams:</p>
+                    <ul>
+                      <li style={{ color: "gray.800", fontWeight: "500" }}>Skaičiuojamosios kainos nustatymas. </li>
+                    </ul>
+                  </Text>
+                </div>
               }
-              iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"kazkas"}
             />
           </Stack>
         </Stack>
         <Flex>
-          <Image
-            rounded={"md"}
-            alt={"feature image"}
-            src={
-              "https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            }
-            objectFit={"cover"}
-          />
-        </Flex>
+  <Image
+    rounded={"md"}
+    alt={"feature image"}
+    src={"/hero.jpg"}  // Corrected path
+    objectFit={"cover"}
+  />
+</Flex>
+
       </SimpleGrid>
     </Container>
   )

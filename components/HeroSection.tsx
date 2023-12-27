@@ -38,14 +38,14 @@ export default function CallToActionWithAnnotation() {
             lineHeight={"110%"}
             color={"white"} // Adjust color for visibility against background
           >
-            Statybos <br />
-            <Text as={"span"} color={"blue.400"}>
-              samatu skaiciavimas
-            </Text>
+            Statybos sąmatų skaičiavimai <br />
+
           </Heading>
 
-          <Text color={"gray.500"}>
-            Kazkoks tekstas
+          <Text color={"gray.800"}
+           fontWeight={400}
+           fontSize={{ base: "2xl", sm: "2xl", md: "3xl" }}>
+          Sąmatos verslui ir privačiam sektoriui
           </Text>
           <Stack
             direction={"column"}
@@ -54,20 +54,7 @@ export default function CallToActionWithAnnotation() {
             alignSelf={"center"}
             position={"relative"}
           >
-            <Button
-              colorScheme={"green"}
-              bg={"green.400"}
-              rounded={"full"}
-              px={6}
-              _hover={{
-                bg: "green.500",
-              }}
-            >
-              Paslaugos
-            </Button>
-            <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-              Daugiau
-            </Button>
+            
           </Stack>
         </Box>
       </Box>
