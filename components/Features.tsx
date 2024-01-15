@@ -18,12 +18,13 @@ import { FaCalculator } from "react-icons/fa6";
 import { ReactElement } from "react"
 
 interface FeatureProps {
+  content: ReactElement;
   text: string
   iconBg: string
   icon?: ReactElement
 }
 
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+const Feature = ({ content, icon, iconBg }: FeatureProps) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
@@ -36,7 +37,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{text}</Text>
+      <Text fontWeight={600}>{content}</Text>
     </Stack>
   )
 }
@@ -71,55 +72,52 @@ export default function SplitWithImage() {
             }
           >
             <Feature
+              content={
+              <div style={{ display: "flex", flexDirection: "column" }}>
 
-  text={
+                <Text color={"gray.800"}>
+                  <p>Privatiems asmenims:</p>
+                  <ul>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų skaičiavimas banko paskolai gauti.</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatos skaičiavimas nutikus draudiminiam įvykiui.</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Siūlomų darbų sąmatų kainų patikrinimas</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Konsultavimas statybos kainos klausimais</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Kainų užklausos medžiagų tiekėjams.</li>
+                  </ul>
+                </Text>
+              </div>} 
+              text={""} 
+              iconBg={""}/>
+            <Feature
+              content={
+              <div style={{ display: "flex", flexDirection: "column" }}>
+
+                <Text color={"gray.800"}>
+                  <p>Statybų įmonėms :</p>
+                  <ul>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Visų statybos darbų Sąmatų skaičiavimas.</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Visa pagalba dalyvaujant Viešuosiuose pirkimuose nuo starto iki pateikimo.</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų analizė, klaidų paieškos.</li>
+                    <li style={{ color: "gray.800", fontWeight: "500" }}>Objektų aktavimas.</li>
+                  </ul>
+                </Text>
+              </div>}
+               text={""} iconBg={""}            />
+              <Feature
+  content={
     <div style={{ display: "flex", flexDirection: "column" }}>
-
       <Text color={"gray.800"}>
-        <p>Privatiems asmenims:</p>
+        <p>Architektams projektuotojams:</p>
         <ul>
-          <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų skaičiavimas banko paskolai gauti.</li>
-          <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatos skaičiavimas nutikus draudiminiam įvykiui.</li>
-          <li style={{ color: "gray.800", fontWeight: "500" }}>Siūlomų darbų sąmatų kainų patikrinimas</li>
-          <li style={{ color: "gray.800", fontWeight: "500" }}>Konsultavimas statybos kainos klausimais</li>
-          <li style={{ color: "gray.800", fontWeight: "500" }}>Kainų užklausos medžiagų tiekėjams.</li>
+          <li style={{ color: "gray.800", fontWeight: "500" }}>Skaičiuojamosios kainos nustatymas.</li>
         </ul>
       </Text>
     </div>
   }
+  text = {""}
+  iconBg={""} // Provide a valid color or remove if not needed
+  // icon={...} // Provide an icon if needed
 />
-
-
-            <Feature
-
-              text={
-                <div style={{ display: "flex", flexDirection: "column" }}>
-            
-                  <Text color={"gray.800"}>
-                    <p>Statybų įmonėms :</p>
-                    <ul>
-                      <li style={{ color: "gray.800", fontWeight: "500" }}>Visų statybos darbų Sąmatų skaičiavimas.</li>
-                      <li style={{ color: "gray.800", fontWeight: "500" }}>Visa pagalba dalyvaujant Viešuosiuose pirkimuose nuo starto iki pateikimo.</li>
-                      <li style={{ color: "gray.800", fontWeight: "500" }}>Sąmatų analizė, klaidų paieškos.</li>
-                      <li style={{ color: "gray.800", fontWeight: "500" }}>Objektų aktavimas.</li>
-                    </ul>
-                  </Text>
-                </div>
-              }
-            />
-            <Feature
-              text={
-                <div style={{ display: "flex", flexDirection: "column" }}>
-            
-                  <Text color={"gray.800"}>
-                    <p>Architektams projektuotojams:</p>
-                    <ul>
-                      <li style={{ color: "gray.800", fontWeight: "500" }}>Skaičiuojamosios kainos nustatymas. </li>
-                    </ul>
-                  </Text>
-                </div>
-              }
-            />
           </Stack>
         </Stack>
         <Flex>
